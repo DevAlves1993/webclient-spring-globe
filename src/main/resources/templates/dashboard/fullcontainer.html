@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Title</title>
+    <link th:replace="style">
+    <script th:replace="script"></script>
+</head>
+<body class="navbar-bottom">
+
+<!--Page header-->
+<!--NavBar-->
+<div th:replace="~{dashboard/navbar}"></div>
+<!--NavBar-->
+<!--Page header-->
+
+
+<!-- Page container -->
+<div class="page-container">
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main content -->
+        <div class="content-wrapper" layout:fragment="container"></div>
+        <!-- Main content -->
+    </div>
+    <!-- Page content -->
+</div>
+<!-- Page container -->
+
+</body>
+</html>

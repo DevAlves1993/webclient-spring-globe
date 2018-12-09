@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{dashboard/container}">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="center-block">
+                <canvas id='globe' width='900' height='720'></canvas>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        Cliquer sur une ligne pour la voir clignoté sur le globe
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div id="countryGuid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script th:src="@{js/pages/dashboard.js}"></script>
+</div>
+</body>
+</html>
